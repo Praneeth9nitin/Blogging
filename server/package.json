@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "@prisma/extension-accelerate": "^1.2.2",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.9",
+    "hono": "^4.7.2",
+    "json-web-token": "^3.2.0",
+    "prisma": "^6.4.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250214.0",
+    "dotenv-cli": "^8.0.0",
+    "wrangler": "^3.109.2"
+  }
+}
