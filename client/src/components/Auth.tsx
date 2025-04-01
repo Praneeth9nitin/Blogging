@@ -19,6 +19,7 @@ function Auth({ type }:{ type: "signup" | "signin" }) {
             const res = await axios.post(`${BACKEND_URL}/api/v1/user/${type}`,inputs)
             const token = res.data.token
             localStorage.setItem("token","Bearer "+token)
+            localStorage.setItem("user",res.data.name)
             setLoading(!loading)
             navigate("/blogs")
         }catch(e){

@@ -33,12 +33,13 @@ userRoute.post("/signup",async (c)=>{
                 password:body.password
             },
             select:{
-                id:true
+                id:true,
+                name:true,
             }
         })
 
         const token = await sign(res,c.env.JWT_SECRET_KEY)
-        return c.json({token})
+        return c.json({token,name:res.name})
 
     }catch (error){
         console.log(error)
@@ -68,7 +69,7 @@ userRoute.post("/signin",async (c)=>{
         })
 
         const token = await sign({id:res?.id},c.env.JWT_SECRET_KEY)
-        return c.json({token})
+        return c.json({token,naeme:res?.name})
     }catch(error){
         c.status(404)
         return c.json({msg:error})
