@@ -11,7 +11,7 @@ function Blog() {
     <div className="m-10 ">
       <Nav/>
       {loading? Array(5).fill(0).map((e,i)=>
-          <BlogsSkeleton key={i} />
+          <BlogsSkeleton key={i+e} />
       ) :blogs.map((e,i)=>
           <Card key={i} id={e.id} Author={e.author.name} title={e.title} content={e.content} publishedDate={e.postTime} />
       )}

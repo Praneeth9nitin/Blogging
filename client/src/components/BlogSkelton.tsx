@@ -10,7 +10,7 @@ function BlogSkelton() {
         </div>
         <div className=' mt-6 '>
             {Array(10).fill(0).map((e,i)=>
-                <div key={i} className="bg-gray-200 w-full m-2 h-7 rounded-full mb-2"></div>
+                <div key={i+e} className="bg-gray-200 w-full m-2 h-7 rounded-full mb-2"></div>
             )}
         </div>
     </div>
