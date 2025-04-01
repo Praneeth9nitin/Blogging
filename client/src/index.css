@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.p-editor-container{
+    border:20x solid blue;
+}
